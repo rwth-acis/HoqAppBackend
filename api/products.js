@@ -1,6 +1,6 @@
 const express = require('express');
 const mongoose = require('mongoose');
-mongoose.connect('mongodb+srv://bigBoss:test123@cluster0-4p8pc.mongodb.net/test?retryWrites=true&w=majority', {useNewUrlParser: true});
+mongoose.connect('mongodb://test:badmin@mongodb.docker-registry:27017/test?authSource=admin&retryWrites=true&w=majority', {useNewUrlParser: true});
 
 const productSchema = require('../Schemas/product-schema.js');
 const Product = mongoose.model('product', productSchema);
