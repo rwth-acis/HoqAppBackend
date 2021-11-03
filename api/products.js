@@ -22,7 +22,7 @@ router.get('/', (req, res) => {
             requirements: [],
             created: Date.now()
           });
-          requirements = getRequest('https://beta.requirements-bazaar.org/bazaar/categories/' + req.query.categoryId + '/requirements?per_page=500&state=all');
+          requirements = getRequest('https://requirements-bazaar.org/bazaar/categories/' + req.query.categoryId + '/requirements?per_page=500&state=all');
           for(j = 0; j < requirements.length; j++){
             product.requirements.push({_id: requirements[j].id, value: 0});
           }
