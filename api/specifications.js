@@ -1,6 +1,6 @@
 const express = require('express');
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://test:badmin@mongodb.docker-registry:27017/test?authSource=admin&retryWrites=true&w=majority', {useNewUrlParser: true});
+mongoose.connect('mongodb://test:badmin@mongodb.hoq:27017/test?authSource=admin&retryWrites=true&w=majority', {useNewUrlParser: true});
 
 const specificationSchema = require('../Schemas/specification-schema.js');
 const Specification = mongoose.model('specification', specificationSchema);
